@@ -1,11 +1,18 @@
-import Vue from 'vue';
-import App from './App.vue';
 import './registerServiceWorker';
-import store from './store';
+import 'vue-material-design-icons/styles.css';
 
-Vue.config.productionTip = false;
+const VueLoader = () => import('vue');
 
-new Vue({
-  store,
-  render: h => h(App),
-}).$mount('#app');
+const AppLoader = () => import('./App.vue');
+
+
+VueLoader().then(async ({ default: VueClass }) => {
+  const Vue = VueClass;
+  const { default: App } = await AppLoader();
+
+  Vue.config.productionTip = false;
+
+  new Vue({
+    render: h => h(App),
+  }).$mount('#app');
+});

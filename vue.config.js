@@ -1,3 +1,12 @@
 module.exports = {
-  publicPath: process.env.NODE_ENV === 'production' ? './' : '/',
+  configureWebpack: {
+    output: {
+      chunkFilename: '[name].bundle.js',
+    },
+    optimization: {
+      splitChunks: {
+        chunks: 'all',
+      },
+    },
+  },
 };
