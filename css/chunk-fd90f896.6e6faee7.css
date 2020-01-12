@@ -1,0 +1,1 @@
+.grid-container{border:2px solid #000;display:grid;grid-template-columns:repeat(auto-fit,200px);background:#eeaeca;background:radial-gradient(circle,#eeaeca 0,#94bbe9 100%)}
