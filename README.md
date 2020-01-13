@@ -1,4 +1,8 @@
-# playlist-editor
+# Playlist Editor
+Simple tool for ordering/sorting m3u (m3u8) playlists 
+
+## Demo: 
+https://yuri-val.github.io/playlist-editor/
 
 ## Project setup
 ```
